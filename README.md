@@ -24,10 +24,9 @@ spec <- rugarch::ugarchspec(variance.model = list(model = "eGARCH",
 There is two parts, the mean equation and the variance equation. Once the model have been specified, the estimation is done using the function **ugarchfit** :
 
 garch <- ugarchfit(spec = spec, data = data.frame(dep), solver.control = list(trace=0))
-
+```
 For more details see [the manual of the package](https://cran.r-project.org/web/packages/rugarch/rugarch.pdf).
 
-```
 ### Contact
 
 Having trouble with the program? you can send me an email (ngbenro@gmail.com).
