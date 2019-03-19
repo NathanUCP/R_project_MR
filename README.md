@@ -7,30 +7,27 @@ The article can be donwload at the following [link]( https://www.mdpi.com/1911-8
 ### R script
 The full R script is given in the file [**Main program**](https://github.com/NathanUCP/R_project_MR/blob/master/Main_prog.R). Here, we describe a part of that program. We focus on the part that estimate the model of the paper. The main steps is estimating a GARCH model using this package is done in two steps which are :
 
-```markdown
-Syntax highlighted code block
+```markdownblock
+Defining the model : use of **ugarchspec function**
 
-# Header 1
-## Header 2
-### Header 3
+spec <- rugarch::ugarchspec(variance.model = list(model = "eGARCH", 
+                                         garchOrder = c(1, 1), 
+                                         submodel = NULL, 
+                                         external.regressors = NULL  , 
+                                         variance.targeting = FALSE), 
+                    mean.model     = list(armaOrder = c(1, 1), 
+                                          external.regressors = lag.return, 
+                                          distribution.model="norm", 
+                                          start.pars = list(), 
+                                          fixed.pars = list()))
 
-- Bulleted
-- List
+There is two parts, the mean equation and the variance equation. Once the model have been specified, the estimation is done using the function **ugarchfit** :
 
-1. Numbered
-2. List
+garch <- ugarchfit(spec = spec, data = data.frame(dep), solver.control = list(trace=0))
 
-**Bold** and _Italic_ and `Code` text
+For more details see [the manual of the package](https://cran.r-project.org/web/packages/rugarch/rugarch.pdf).
 
-[Link](url) and ![Image](src)
 ```
+### Contact
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NathanUCP/R_project_MR/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with the program? you can send me an email (ngbenro@gmail.com).
