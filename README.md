@@ -5,7 +5,7 @@ This web page give access to the R script that have been used for the article : 
 The article can be donwload at the following [link]( https://www.mdpi.com/1911-8074/12/1/38). The artcile used GARCH methods based on the R package [_rugarch_](https://cran.r-project.org/web/packages/rugarch/index.html).
 
 ### R script
-The full R script is given in the file **Main program**. Here, we describe a part of that program. We focus on the part that estimate the model of the paper. The main steps is estimating a GARCH model using this package is done in two steps which are :
+The full R script is given in the file [**Main program**](https://github.com/NathanUCP/R_project_MR/blob/master/Main_prog.R). Here, we describe a part of that program. We focus on the part that estimate the model of the paper. The main steps is estimating a GARCH model using this package is done in two steps which are :
 
 ```markdown
 Syntax highlighted code block
