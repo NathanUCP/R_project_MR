@@ -8,7 +8,7 @@ The article can be donwload at the following [link]( https://www.mdpi.com/1911-8
 The full R script is given in the file [**Main program**](https://github.com/NathanUCP/R_project_MR/blob/master/Main_prog.R). Here, we describe a part of that program. We focus on the part that estimate the model of the paper. The main steps is estimating a GARCH model using this package is done in two steps which are :
 
 ```markdownblock
-Defining the model : use of **ugarchspec function**
+Definition of the model : use of **ugarchspec function**
 
 spec <- rugarch::ugarchspec(variance.model = list(model = "eGARCH", 
                                          garchOrder = c(1, 1), 
