@@ -1,12 +1,11 @@
-## Welcome to GitHub Pages
+## Asymmetric Mean Reversion in Low Liquid Markets: Evidence from BRVM
 
-You can use the [editor on GitHub](https://github.com/NathanUCP/R_project_MR/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This web page give access to the R script that have been used for the article : _**Asymmetric Mean Reversion in Low Liquid Markets: Evidence from BRVM**_.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The article can be donwload at the following [link]( https://www.mdpi.com/1911-8074/12/1/38). The artcile used GARCH methods based on the R package [_rugarch_](https://cran.r-project.org/web/packages/rugarch/index.html).
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### R script
+The full R script is given in the file **Main program**. Here, we describe a part of that program. We focus on the part that estimate the model of the paper. The main steps is estimating a GARCH model using this package is done in two steps which are :
 
 ```markdown
 Syntax highlighted code block
